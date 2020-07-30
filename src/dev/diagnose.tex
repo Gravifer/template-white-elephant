@@ -1,0 +1,20 @@
+% for diagnostic purposes only; put at the head of the file (even before the \documentclass{} when needed)
+% kernel diagnoses
+\RequirePackage{etex}
+% \RequirePackage{fixltx2e} %! no longer required after 2015
+% \RequirePackage{snapshot} %! currently leads to collapse; needs to find out way
+% \RequirePackage{bundledoc} % use together with snapshot
+\RequirePackage{etoolbox}
+
+% layout diagnoses
+\RequirePackage{layout} % standard LaTeX tool
+% \RequirePackage{layouts} % shadows the former %! current issues conflict with hyperref; wonder why
+
+% \RequirePackage{fileerr} %! not supported by Overleaf
+
+\RequirePackage{showkeys}
+\RequirePackage{showlabels}
+
+\RequirePackage{syntonly}
+% \input{src/dev/print-files-used} %! l3regex not currently supported by Overleaf
+% 

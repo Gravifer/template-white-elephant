@@ -1,0 +1,28 @@
+%!TEX program = xelatex
+\ifx\allfiles\undefined
+\input{src/overture}
+\documentclass{article}
+% \usepackage[utf8]{inputenc} % won't need when using XeTeX
+\title{Title}
+\author{Author}
+\date{\today}
+\input{src/preamble}
+\addbibresource{ref/references.bib}
+\begin{document}
+\maketitle
+\fi
+% \printnomenclature 
+
+\section{Introduction}
+There is a theory which \uline{states that if ever anyone discovers} exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by \emph{something even more bizarre and inexplicable}.
+There is another theory which states that this has already happened.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1.7]{media/pic/img/universe}
+\caption{The Universe}
+\label{fig:universe}
+\end{figure}
+\ifx\allfiles\undefined
+\end{document}
+\fi

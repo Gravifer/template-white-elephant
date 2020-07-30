@@ -1,0 +1,23 @@
+\usepackage{array} % do not use due to \url{https://tex.stackexchange.com/questions/213088/amsmath-matrix-vs-loading-the-array-package}
+\usepackage{dcolumn} % allows alignment at decimal points
+\usepackage{hhline}
+
+\usepackage{supertabular} % jolly old many-pages table support
+\usepackage{longtable} % a superseder; but have a few more problems. do not use this inside a multicol, and you are basically good to go
+
+% \usepackage{slashbox} % needs direct attention
+\usepackage{multirow} % the multicol package is in layout.tex and is not for tables
+\usepackage{bigstrut}
+\usepackage{bigdelim}
+\usepackage{makecell}
+
+\usepackage{tabularx}
+\usepackage{xltabular}
+
+% colorful tables
+\usepackage{tcolorbox}
+\usepackage{colortbl}
+% the xcolor package also have related features
+
+% \usepackage{mdwtab} % This reimplementation of the tabular and array environments re-does what the array package does, but in a way that builds on a reimplementation of the tabular and array functionality within the LATEX kernel itself. Among many improvements claimed for the package is that there are no built-in column types: all column types are explicitly declared within the package. 
+%! This, though very neat, introduces serious incompatibility with the aforementioned packages.

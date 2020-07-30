@@ -1,0 +1,37 @@
+%!TEX program = xelatex
+\input{src/overture}
+\documentclass{article}
+% \usepackage[utf8]{inputenc} % won't need when using XeTeX
+\title{Title}
+\author{Author}
+\date{\today}
+\def\allfiles{}
+\input{src/preamble}
+\addbibresource{ref/references.bib}
+\begin{document}
+\maketitle
+% \printnomenclature 
+\import{sub/}{subdocument.tex}
+
+\section{Conclusion}
+``I always thought something was fundamentally wrong with the universe''
+% \citep{adams1995hitchhiker} %! bibtex style command; deprecated by biblatex
+%! instead use
+\cite{adams1995hitchhiker}
+
+QRcodes for URLs\index{URL}
+% \nomenclature{URL}{universal resource locator} 
+can be inserted e.g.,
+
+\hvqrurl{https://mirror.ctan.org/pkg/hvqrurl}
+
+\lipsum
+
+%! bibtex style bibliography; deprecated by biblatex
+% \bibliographystyle{plain}
+% \bibliography{references}
+%! instead use
+% \emergencystretch=1em
+\printbibliography
+% \printindex
+\end{document}

@@ -1,0 +1,26 @@
+\PassOptionsToPackage{export}{adjustbox} % peculiar behavior observed with the pass-options command
+% various part of document
+\usepackage{abstract}
+\usepackage{marginnote}
+
+
+\usepackage{environ}
+% \usepackage{comment}
+\usepackage{verbatim}
+\usepackage{fancyvrb} % calls the adjustbox package
+% \usepackage{sverb} % reimplements much of the verbatim and moreverb packages in a way that is arguably more efficient; the package is part of the mdwtools bundle (whence incompatible with some important packages).
+% \usepackage{minted} %! incompatible with the newfloat ecosystem% \usepackage[export]{adjustbox} % peculiar behavior observed with the pass-options command
+% the dialog environment package is loaded in frankenstein.tex
+\usepackage{fancybox}
+\usepackage{niceframe}
+
+% multiple columns and rows
+\usepackage{multicol} % longtable cannot be used inside the multicol environment
+% the multirow package is in tables.tex and is not for layout
+
+% footnotes
+% \usepackage{footnote}
+% \usepackage{footnotehyper} % supersedes the former
+\usepackage{ftnright} % assembles footnotes on two-column pages at the bottom of the right hand column. (disable if not desired)
+
+% \usepackage{appendix} % not recommended

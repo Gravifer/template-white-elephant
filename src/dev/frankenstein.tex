@@ -1,0 +1,14 @@
+%! put packages from the frankenstein bundle here
+\show \providelength
+\makeatletter
+\@ifpackageloaded{polyglossia}{
+    \forgetcommand\providelength
+    \forgetcommand\providecounter}{}
+\makeatother
+
+\usepackage{moredefs} %! conflict with polyglossia
+\usepackage{abbrevs} %! calls moredefs
+\usepackage{attrib} % allows to label blocks with attributes
+\usepackage{dialogue} % privides a dialog environment
+% \usepackage{newclude} % very similar to docmute in project.tex
+% \usepackage{compsci} % extremely time comsuming to load

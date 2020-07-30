@@ -1,0 +1,25 @@
+%! hyper-referencing: load them last!
+\usepackage{nameref} % mustr be loaded before hyperref
+\usepackage{hypbmsec}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{xr, xr-hyper} % external references
+\usepackage[unicode,plainpages=false,hidelinks,pdfpagelabels]{hyperref} % unless explicitly required, load this after any other package; the plainpages option is turned off to make it compatible with roman page labels; when the backref option is given, the backref package is loaded (incompatible with biblatex, which also provides back referencing)
+\urlstyle{same}
+\makeatletter
+\AtBeginDocument{
+  \hypersetup{
+    pdftitle = {\@title},
+    pdfauthor = {\@author}
+  }
+}
+\makeatother
+\usepackage{cleveref} %! must come after the hyperref package; it is state-of-the-art fully-dynamic cross-referencing package; indispensible!
+%! Some caveats when using the cleveref package:
+%! The package is seriously incompatible with the showonlyrefs option of the mathtools package. By "seriously incompatible" I mean that if cleveref is loaded together with \usepackage[showonlyrefs]{mathtools}, not only will the \cref commands containing labels of equation objects be messed up, but many other cross-referencing packages will also experience major problems. Fortunately, this problem appears to be the only incompatibility between the cleveref and mathtools packages.
+%! If both the footmisc and the hyperref packages are loaded, there are some unresolved incompatibilities that affect cross-references to footnotes. This problem also affects a variety of other packages that provide cross-referencing functions, including cleveref.
+%! If your document loads the babel package with the option french, be sure not to use : ("colon") in the arguments of any \label and \cref-family instructions. This is because (a) the babel-french combination makes the : character "active" and (b) \cref needs to perform various operations on its argument: these operations will crash if the : character is active.
+% \usepackage{amsrefs} % must be loaded after the hyperref package (unclear right now what it does); incompatible with biblatex
+% \usepackage{autonum} %! arranges that equation numbers are applied only to those equations that are referenced (thus remedies clash between the cleveref package and the showonlyref option of the mathtool package); sadly it requires the obsolete etextool package, and clashes with biblatex; must be loaded after hyperref and cleveref
+
+% \usepackage{enumitem-zref} % unclear right now
+\usepackage[perpage,user]{zref} % may be the next-generation cross-referencing method

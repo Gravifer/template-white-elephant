@@ -1,0 +1,15 @@
+\usepackage{color}
+% \usepackage{xetex-def} % adjust graphics and color for xetex %! do not work with Overleaf
+% \usepackage{pagecolor} % provides the command \thepagecolor, which gives the current page (background) colour, i. e. the argument used with the most recent call of \pagecolor{...}. %! don't work well with XeTeX, because there is no \nopagecolor command in it 
+% the following packages defines a bunch of colors; shadowing is not yet examined
+\usepackage{latexcolors} % defines the set of colors shown on latexcolor.com for use in documents typeset with LATEX & friends.
+% \usepackage{xcolor-material}
+% \usepackage{xcolor-solarized}
+\usepackage{css-colors} % defines web-safe colors for use with D.P. Carlisle’s color package
+\usepackage{svgcolor} % defines the W3C Scalable Vector Graphics (SVG) colour names for use with both the color and PSTricks packages.
+% \usepackage{biochemistry-colors} %! not supported by Overleaf
+
+% \usepackage{coloring} % if use undefined colors following its syntax,  \definecolor need not be called manually %! requires the l3regex package, which is currently not supported by Overleaf
+% \usepackage[dvipsnames, svgnames, x11names]{xcolor} % loaded by the pdfpages package in layout.tex with no options
+% \usepackage{texshade} % pattern-matching based highlighting % the schedule package wierdly clashes when texshade is called, even when schedule is not loaded; leads to too many symbol fonts %! MANY WIERD PROBLEMS; DO NOT USE AT LEAST FOR NOW
+\usepackage{clrstrip}

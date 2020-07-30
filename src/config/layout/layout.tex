@@ -1,0 +1,38 @@
+\usepackage{geometry} % sets the typing area from a fixed margin
+% \usepackage{typearea} % automatically gives good typing area
+%! geometry and typearea: one or the other
+\usepackage{fancyhdr} %! fancy headers and footers; must be loaded befor the hyperref package
+    \input{src/settings/set-layout}
+% \usepackage{titlesec} % supports more extensive features than the fancyhdr package; but does not support \section*{} grammar
+%! fancyhdr and titlesec: one or the other
+% \usepackage{fncychap} %! clash with polyglossia; fix later
+\input{src/config/layout/tocs}
+\input{src/config/layout/envs}
+
+% \usepackage{indentfirst} % (disable if not desired)
+% \usepackage{manuscript} % make the document look like a typewriter manuscript; not that it works, though :)
+\usepackage{blindtext}
+\usepackage{lipsum}
+\usepackage{kantlipsum}
+\usepackage{zhlipsum}
+% \usepackage{quran} % currently won't work
+\usepackage{duckuments}
+\usepackage{testidx}
+\usepackage{foreign}
+
+\PassOptionsToPackage{dvipsnames, svgnames, x11names}{xcolor}
+\usepackage{pdfpages} % loads xcolor with no option
+\usepackage{crop} % provides crop marks for printing
+% \usepackage{titling} % cf. \url{https://mirror.las.iastate.edu/tex-archive/macros/latex/contrib/titling/titling.pdf} and \url{https://tex.stackexchange.com/questions/263676/modifying-maketitle-with-the-titling-package} for usage
+\usepackage{everyshi} % introduces a new hook for taking action at every \shipout command (the command that writes to the output file)
+    % \EveryShipout{\textsc{\thistitle}} %! using this to get headers is a terrible practice; when floats appear at the top of a page, the header is placed under them, which is very confusing
+\usepackage{everypage}
+\usepackage{lastpage} % provides the reference of the last page
+\usepackage{afterpage}
+\usepackage{pagesel}
+% \usepackage{clipboard} % causes corruption; unclear
+
+\usepackage{imakeidx} % instead of imakeidx the package makeidx may be imported, but offers less customizations possibilities.
+\makeindex
+% \usepackage{nomencl} %! do not know why but messed up
+% \makenomenclature

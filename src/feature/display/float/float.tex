@@ -1,0 +1,21 @@
+\usepackage{rotating} % provides rotating for floats and boxes; based on the graphics package
+% \usepackage{lscape,pdflscape} % allows rotating multiple pages
+
+% float typesetting
+% \usepackage{float} % improved interface for floating objects, allows extra control on float objects; must be leaded before hyperref
+% \usepackage{rotfloat} % links the float package and the rotating package
+% \usepackage{floatflt} % float text around figures and tables which do not span the full width of a page; must use with the float package, and conflicts with the newfloat ecosystem
+\usepackage{newfloat, keyfloat} % the keyfloat package provides mordern key-value grammar for new float types; conflicts with float and requires the newfloat package
+% \usepackage{floatrow} %! conflicts with keyfloat
+\usepackage{wrapfig} % substitude for the floatflt package
+% \usepackage{endfloat} % puts all floating objects to the end of the document
+\usepackage{placeins} % THOU SHALL NOT PASS!!! % provides barriers to force floats to be processed
+
+\usepackage{minidocument} % allows displaying a shrinked copy of a document
+
+\usepackage{qrcode}
+\usepackage{hvqrurl}
+
+\input{src/feature/display/float/caption}
+\input{src/feature/display/float/tables}
+\input{src/feature/display/float/lists}

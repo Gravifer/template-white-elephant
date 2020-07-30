@@ -1,0 +1,33 @@
+% this is based on \url{https://tex.stackexchange.com/a/36312/217205}
+%- (deprecated)load this into the preamble last to avoid conflicts with hyperref
+% cross-referencing
+%% \eqref{} is provided by the amsmath package (in ams.tex in this template)
+%% \autoref{} is provided by the hyperref package (in the main preamble.tex in this template)
+%! \cref and \crefrange (and the uppercase variants \Cref and \Crefrange for use at the start of a sentence) are provided by the cleveref package (in the main preamble.tex in this template); it is state-of-the-art for now
+
+% \usepackage{nameref} % automatically loaded when the hyperref package is used, but when the titleref package is used, this must come before it
+% \usepackage{titleref} % must without usetoc, or it clashes with the hyperref package; not so neat
+% \usepackage{prettyref} % provides \prettyref{<format>:<name>}; generates prefix based on the format field of the label; known issues when used together with the babel package in french (load babel-french instead)
+%! (whence it is not suggested to use the prettyref package)
+% \usepackage{typedref} % a pain-in-the-ass way for referencing
+
+\usepackage{varioref} % provides \vref{}, \vpageref{}, \vrefrange{} and \vpagerefrange{}, which gives human friendly page location information like "on the facing page", etc.
+\usepackage{smartref} % extends the feature of the varioref package to counters other than \label
+
+% \usepackage{fancyref} %! compatible with the varioref and smartref packages; works similarly like the prettyref package; it however conflicts with the cleveref package
+% \makeatletter % suggested in \url{https://tex.stackexchange.com/a/100825/5001}
+% \def\mkfancyprefix#1#2{%
+%   \@namedef{fancyref#1labelprefix}{#1}%
+%   \begingroup\def\x{\endgroup\frefformat{plain}}%
+%     \expandafter\x\csname fancyref#1labelprefix\endcsname
+%       {\MakeLowercase{#2}\fancyrefdefaultspacing##1}%
+%   \begingroup\def\x{\endgroup\Frefformat{plain}}%
+%     \expandafter\x\csname fancyref#1labelprefix\endcsname
+%       {#2\fancyrefdefaultspacing##1}%
+% }
+% \makeatother % this provides e.g., \mkfancyprefix{lem}{Lemma}
+
+\usepackage{csquotes}
+
+% \usepackage{theoremref} % limited functionality; not suggested
+% \usepackage[hyperref, thref]{ntheorem} % provides fully-dynamic \thref for theorem-like objects; not exactly needed when using the cleveref package

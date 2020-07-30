@@ -1,0 +1,11 @@
+% providing tools handy for TeX programming
+% \PassOptionsToPackage{xetex}{graphicx}
+% \usepackage{xltxtra} % loads graphicx with no option %! mess up polyglossia
+\usepackage{xparse}
+\usepackage{xkeyval}
+\usepackage{xstring}
+\usepackage{xspace}
+\usepackage{xpatch}
+\usepackage{xifthen} % combines the ifthen and calc packages
+\usepackage{ifthenx} % must be loaded after the package xifthen
+\newcommand{\forgetcommand}[1]{\ifdefined #1 \let #1 \undefined \fi}

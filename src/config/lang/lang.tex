@@ -1,0 +1,28 @@
+\usepackage{polyglossia}
+\setmainlanguage{english}
+% \setotherlanguages{hindi,sanskrit,greek,thai,russian}
+% \setotherlanguages{hindi,sanskrit,greek,russian}
+% Fonts
+    % Main serif font for English (Latin alphabet) text
+        %\setmainfont[Ligatures=TeX]{Noto Serif}
+        %\setsansfont[Ligatures=TeX]{Noto Sans}
+        %\setmonofont{Noto Mono}
+    %%%
+    % define fonts for other languages
+        % \newfontfamily\arabicfont[Script=Arabic]{Noto Naskh Arabic}
+        % \newfontfamily\devanagarifont[Script=Devanagari]{Noto Serif Devanagari}
+        % \newfontfamily\greekfont[Script=Greek]{GFS Artemisia}
+        % \newfontfamily\thaifont[Script=Thai]{Noto Serif Thai}
+        % \newfontfamily\russianfont[Script=Cyrillic]{CMU Serif}
+        % When compiling with XeLaTex ..
+        \usepackage{xeCJK}
+        % Assuming Chinese is the main CJK language...
+        \setCJKmainfont[BoldFont=WenQuanYi Zen Hei,
+                        ItalicFont=AR PL KaitiM GB]{AR PL SungtiL GB}
+        \setCJKsansfont{Noto Sans CJK SC}
+        \setCJKmonofont{cwTeXFangSong}
+        \newCJKfontfamily\japanesefont{IPAMincho} % for Nihon & Korean
+    %%%
+        \usepackage{ctex}
+        % \usepackage[normalem]{ulem}
+%%%

@@ -1,0 +1,17 @@
+% subfigure and caption object typesetting
+%! as long as the driver is new enough, do not use the subfigure or subfig packages (subfigure especially)
+\usepackage[font=small,labelsep=quad,indention=10pt]{caption} % big package; supersedes the legacy caption2 package; cf. \url{http://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/caption/caption-eng.pdf}
+\usepackage[labelfont=bf,list=true]{subcaption}
+\captionsetup[table]{textfont=it,position=top}
+\captionsetup[subtable]{textfont=sf}
+\captionsetup[figure]{position=bottom}
+\captionsetup{labelsep=period}
+%% above are the default values from the subcaption documentation \url{https://mirrors.concertpass.com/tex-archive/macros/latex/contrib/caption/subcaption.pdf}
+\usepackage{bicaption} % bilingual captions; requires the babel and caption packages
+\usepackage{mcaption} % provides an mcaption environment which puts figure or table captions in the margin
+\usepackage{sidecap} % provides the SCfigure environment where the caption is put on the side
+% \usepackage{subfig} %! legacy, do not use!
+% \usepackage{fltpage} % provides the FPfigure and FPtable environments which allow the caption to be on the previous or next page than the figure itself %! not supported by Overleaf
+\usepackage{sublabel}
+% \usepackage{captcont} % allows enhanced control over the counter of captions %! legacy! do not use
+\usepackage{minitoc} % moved here from toc.tex for compatibility

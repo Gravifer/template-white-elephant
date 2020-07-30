@@ -1,0 +1,19 @@
+%! define warning filters of the silence package here; activate them in the real preamble to make adjustments easier
+\WarningFilter[cjk]{fontspec}{Font}
+\WarningFilter[cjk]{xeCJK}{Redefining}
+
+\WarningFilter[biblatex-footnote-patch]{biblatex}{Patching footnotes failed.}
+
+\WarningFilter[captionsetup]{caption}{Unused \captionsetup[sub] on input line}
+\WarningFilter[captionsetup]{caption}{Unused \captionsetup[table] on input line}
+\WarningFilter[captionsetup]{caption}{Unused \captionsetup[subtable] on input line}
+
+\WarningFilter[quantum]{tikz-feynman}{LuaTeX is required}
+\WarningFilter[circuit]{Qcircuit}{qcircuit is not loading in PDF mode.}
+\WarningFilter[chemistry]{chemmacros}{You haven't loaded any package for upright Greek}
+
+% family activation
+\ActivateWarningFilters[cjk]
+\ActivateWarningFilters[biblatex-footnote-patch]
+\ActivateWarningFilters[captionsetup]
+\ActivateWarningFilters[quantum,circuit,chemistry]

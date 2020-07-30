@@ -1,0 +1,35 @@
+\include{src/feature/display/math/ams}
+% \usepackage{envmath} %! do not know why but do not work yet
+\usepackage{mathtools} %! the showonlyrefs option severely conflicts with the cleveref package
+% \usepackage{isomath} %! exceeds TeX capacity right now (causing infinite loops)
+% \usepackage{subeqn} %! clash with mathtools
+\usepackage{empheq}
+
+\usepackage{harpoon}
+\usepackage{extarrows}
+\usepackage{upgreek}
+\usepackage{mdwmath} % permit \sqrt to omit its vinculum (bar over its argument), as required; add some boolean operators; and provide some user control of the expansion of delimiters as the delimited material grows
+% \usepackage{tmmath} %! not supported by Overleaf
+\usepackage{newtxtext,newtxmath} % use after the amsthm package
+%! Loading mathabx and amssymb along with newtxmath is useless: if you load mathabx before newtxmath, most of the symbols will be redefined; in the other order, mathabx will override most of newtxmath symbols.
+% \usepackage[nointegrals]{wasysym} % cannot use together with newtx packages
+\usepackage{mathrsfs} % pretty dated
+% \usepackage{calrsfs} % overwrites \mathcal with \mathscr from mathrsfs; both pretty dated though not obsolete
+% \usepackage{yhmath} % seems shadowed by newtxmath
+\usepackage{mathalpha} % the cal=rsfs option results in too much symbol fonts; resolution will be found in the future
+
+\usepackage{sepnum}
+\usepackage{siunitx} % allows input of dimensional quantities %! note \url{https://tex.stackexchange.com/questions/506836/conflict-between-siunitx-and-hyperxmp}
+\usepackage{xfrac} % mordern support for fractions (supersedes the nicefrac package)
+% \usepackage{vector}
+\usepackage{easybmat}
+\usepackage{tensor}
+\usepackage{linop}
+
+\usepackage{autobreak}
+%% a possible alternative exists:
+% \usepackage[mathpazo]{flexisym}
+% \usepackage{breqn}
+\usepackage{bropd}
+\usepackage{fixmath}
+\usepackage{bm, bbm} % put here for legacy reasons
